@@ -1,0 +1,34 @@
+.container {
+  padding-top: 42px;
+  display: flex;
+  height: 400px;
+}
+
+.content {
+  margin: 14px 0px;
+  &--flex {
+    display: flex;
+  }
+}
+
+.text-title {
+  font-size: 21px;
+  margin: 3.5px;
+  color: #fafafa;
+}
+
+.brand {
+  font-size: 28px;
+  color: #3282b8;
+  @media (max-width: 375px) {
+    display: block;
+  }
+}
+
+.link {
+  :focus {
+    outline: 0;
+  }
+  width: 100%;
+  margin: 0px 3.5px;
+}

@@ -1,45 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
+import Header from '../../components/Header';
+import Card from '../../components/common/Card';
+import Button from '../../components/common/Button';
+import './style.scss';
 
-import * as userAction from '../../redux/actions/user';
-import MobileViewWrapper from '../../components/MobileViewWrapper';
-import { BASE_API } from '../../constants';
-import isEmpty from '../../utils/isEmpty';
-
-import Title from './style';
-
-const Home = props => {
-  const [userData, setUserData] = useState(null);
-
-  useEffect(() => {
-    props.requestUser(1);
-  }, []);
-
-  useEffect(() => {
-    if (!isEmpty(props.user)) {
-      setUserData(props.user);
-    }
-  }, [props.user]);
-
-  useEffect(() => {
-    console.log(userData);
-  }, [userData]);
-
+const Home = () => {
   return (
-    <MobileViewWrapper>
-      <Title>{BASE_API}</Title>
-    </MobileViewWrapper>
+    <React.Fragment>
+      <Header />
+      <div className="container">
+        <Card>
+          <div className="content">
+            <h1 className="text-title">Well Hello!</h1>
+            <h1 className="text-title">My name is Kretawiweka</h1>
+            <h1 className="text-title">
+              {"I'm a "}
+              <span className="brand">Software Engineer</span>
+            </h1>
+          </div>
+          <div className="content--flex">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+              href="https://www.linkedin.com/in/kretawiweka"
+            >
+              <Button>linkedin</Button>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+              href="http://github.com/kretawiweka"
+            >
+              <Button>github</Button>
+            </a>
+          </div>
+        </Card>
+      </div>
+    </React.Fragment>
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    user: state.user
-  };
-};
-
-const mapDispatchToProps = dispatch => ({
-  requestUser: payload => dispatch(userAction.userRequest(payload))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home;
