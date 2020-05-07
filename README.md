@@ -1,6 +1,6 @@
-# Craft
+# kretawiweka
 
-craft is CRA template powered by [Create React App](https://github.com/facebook/create-react-app).
+kretawiweka build with craft. craft is CRA template powered by [Create React App](https://github.com/facebook/create-react-app).
 
 ## Development
 
@@ -60,4 +60,4 @@ src/
 `/src/styles` Basic styles (normalize, etc) for this App
 
 `/src/utils` Utils Helpers
-# kretawiweka
+
