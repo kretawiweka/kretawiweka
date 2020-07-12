@@ -15,9 +15,9 @@ const Profile = () => {
             <p className="description">
               As a software engineer, I want to pursue the whole field of
               software engineer. Even though in my career I have been focusing
-              more on the frontend engineer, but I also like to explore and
-              discuss whole field of software engineer and even like to discuss
-              business and design.
+              more on the frontend engineering, but I also like to explore and
+              discuss whole field of software engineering and even like to
+              discuss about business and design.
             </p>
           </div>
         </div>
