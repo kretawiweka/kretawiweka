@@ -1,23 +1,61 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Skeleton from 'react-loading-skeleton';
 
 import Card from '../common/Card';
+import fetchData from '../../utils/fetchData';
 import './style.scss';
 
 const Article = () => {
+  const [articleData, setArticleData] = useState(null);
+
+  useEffect(() => {
+    const getMediumData = async () => {
+      const mediumData = await fetchData({
+        url:
+          'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@kretawiweka'
+      });
+      let data = mediumData.data.items.filter(
+        data => data.categories.length > 0
+      );
+      setArticleData(data);
+    };
+    getMediumData();
+  }, []);
+
+  useEffect(() => {
+    console.log(articleData);
+  }, [articleData]);
+
+  const Loading = () => {
+    return (
+      <h1>
+        <Skeleton count={3} />
+      </h1>
+    );
+  };
+
   return (
     <div className="article">
       <Card>
         <div className="content">
-          <div className="text">
-            <h3 className="title">Hi, there!</h3>
-            <p className="description">
-              As a software engineer, I want to pursue the whole field of
-              software engineer. Even though in my Article I have been focusing
-              more on the frontend engineer, but I also like to explore and
-              discuss backend, infra, etc and even like to discuss business and
-              design.
-            </p>
-          </div>
+          <h2>Writing making us remember it better!</h2>
+          {articleData === null ? (
+            <Loading />
+          ) : (
+            articleData.map((item, index) => (
+              <div key={index}>
+                <a href={item.link} className="item" target="__blank">
+                  <img
+                    className="item-img"
+                    src={item.thumbnail}
+                    alt={item.title}
+                  />
+                  <h4 className="item-title">{item.title}</h4>
+                </a>
+                <hr className="divider article-divider" />
+              </div>
+            ))
+          )}
         </div>
       </Card>
     </div>

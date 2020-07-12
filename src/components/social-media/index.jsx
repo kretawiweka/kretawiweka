@@ -45,7 +45,7 @@ const SocialMedia = () => {
             <img className="icon-item" src={gatsbyIcon} alt="medium-icon" />
             <a
               target="__blank"
-              href="http://github.com/kretawiweka"
+              href="https://justblog.kretawiweka.site/"
               className="link-item"
             >
               Blog

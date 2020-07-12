@@ -43,14 +43,14 @@ const Career = () => {
                 a Web using JavaScript Framework, CSS, Sass, and several
                 JavaScript libraries using API. Here are some Tech Stack Details
                 :
-                <ul>
-                  <li>HTML</li> <li>Vanilla JS</li> <li>ReactJS</li>{' '}
-                  <li>NextJS</li> <li>JQuery</li> <li> CSS</li>
-                  <li>Sass</li>
-                  <li>StyledComponent</li>
-                  <li>Redux</li>
-                </ul>
               </p>
+              <ul>
+                <li>HTML</li> <li>Vanilla JS</li> <li>ReactJS</li>{' '}
+                <li>NextJS</li> <li>JQuery</li> <li> CSS</li>
+                <li>Sass</li>
+                <li>StyledComponent</li>
+                <li>Redux</li>
+              </ul>
             </div>
           </div>
           <hr className="divider company-divider" />
@@ -95,6 +95,7 @@ const Career = () => {
               </p>
             </div>
           </div>
+          <hr className="divider company-divider" />
         </div>
       </Card>
     </div>
