@@ -16,8 +16,8 @@ const Profile = () => {
               As a software engineer, I want to pursue the whole field of
               software engineer. Even though in my career I have been focusing
               more on the frontend engineer, but I also like to explore and
-              discuss backend, infra, etc and even like to discuss business and
-              design.
+              discuss whole field of software engineer and even like to discuss
+              business and design.
             </p>
           </div>
         </div>

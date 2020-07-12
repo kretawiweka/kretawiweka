@@ -22,10 +22,6 @@ const Article = () => {
     getMediumData();
   }, []);
 
-  useEffect(() => {
-    console.log(articleData);
-  }, [articleData]);
-
   const Loading = () => {
     return (
       <h1>
