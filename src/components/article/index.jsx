@@ -34,7 +34,7 @@ const Article = () => {
     <div className="article">
       <Card>
         <div className="content">
-          <h2>Writing making us remember it better!</h2>
+          <h2 className="title">Writing making us remember it better!</h2>
           {articleData === null ? (
             <Loading />
           ) : (
