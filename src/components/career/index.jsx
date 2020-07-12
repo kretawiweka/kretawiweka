@@ -32,7 +32,7 @@ const Career = () => {
                 alt="kitabisa-logo"
               />
               <div className="title-text">
-                <h4 className="job-title">Frontend Engineer</h4>
+                <h4 className="job-title">Software Engineer</h4>
                 <h4 className="company">Kitabisa, Jakarta</h4>
                 <h4 className="work-time">August 2018 - May 2020</h4>
               </div>
@@ -62,7 +62,7 @@ const Career = () => {
                 alt="olimpiade-logo"
               />
               <div className="title-text">
-                <h4 className="job-title">Frontend Engineer</h4>
+                <h4 className="job-title">Software Engineer</h4>
                 <h4 className="company">Olimpiade.id, Surabaya</h4>
                 <h4 className="work-time">January 2017 - June 2018</h4>
               </div>
@@ -83,7 +83,7 @@ const Career = () => {
             <div className="item-title">
               <img src={haiUnair} className="item-img" alt="haiunair-logo" />
               <div className="title-text">
-                <h4 className="job-title">Frontend Engineer</h4>
+                <h4 className="job-title">Software Engineer</h4>
                 <h4 className="company">Hai Unair, Surabaya</h4>
                 <h4 className="work-time">September 2016 - January 2017</h4>
               </div>
